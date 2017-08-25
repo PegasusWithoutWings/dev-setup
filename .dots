@@ -55,6 +55,16 @@ function runDots() {
             echo ""
             ./osx.sh
         fi
+        if [ $ARG == "conda" ] || [ $ARG == "all" ]; then
+            # Run the conda.sh Script
+            echo ""
+            echo "------------------------------"
+            echo "Installing Anaconda3 with all its components."
+            echo "This might awhile to complete"
+            echo "------------------------------"
+            echo ""
+            ./conda.sh
+        fi
         if [ $ARG == "aws" ] || [ $ARG == "all" ]; then
             # Run the aws.sh Script
             echo "------------------------------"
