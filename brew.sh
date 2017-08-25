@@ -57,8 +57,8 @@ brew install wget --with-iri
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+# brew install ringojs
+# brew install narwhal
 
 # Install Python
 brew install python
@@ -115,22 +115,21 @@ brew install dark-mode
 #brew install exiv2
 brew install git
 brew install git-lfs
-brew install git-flow
-brew install git-extras
+# brew install git-flow
+# brew install git-extras
 brew install hub
-brew install imagemagick --with-webp
-brew install lua
-brew install lynx
+# brew install imagemagick --with-webp
+# brew install lua
+# brew install lynx
 brew install p7zip
 brew install pigz
-brew install pv
+# brew install pv
 brew install rename
-brew install rhino
+# brew install rhino
 brew install speedtest_cli
-brew install ssh-copy-id
 brew install tree
 brew install webkit2png
-brew install zopfli
+# brew install zopfli
 brew install pkg-config libffi
 brew install pandoc
 
@@ -141,8 +140,8 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Install Heroku
-brew install heroku-toolbelt
-heroku update
+# brew install heroku-toolbelt
+# heroku update
 
 # Install Cask
 brew install caskroom/cask/brew-cask
@@ -157,13 +156,13 @@ brew cask install --appdir="~/Applications" xquartz
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
+# brew cask install --appdir="/Applications" virtualbox
+# brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
+# brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
