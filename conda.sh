@@ -12,7 +12,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install if we don't have it
 if test ! $(which conda); then
   echo "Installing Anaconda..."
-  curl -fLo ~/Downloads/Anaconda3-4.4.0-MacOSX-x86_64.sh https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.sh
-  bash ~/Downloads/Anaconda3-4.4.0-MacOSX-x86_64.sh
-  rm -f ~/Downloads/Anaconda3-4.4.0-MacOSX-x86_64.sh
+  wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+  bash Miniconda3-latest-MacOSX-x86_64.sh
+  # TODO: Export Conda's location to PATH variable.
+  rm -f Miniconda3-latest-MacOSX-x86_64.sh
 fi
