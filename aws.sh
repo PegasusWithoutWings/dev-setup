@@ -20,26 +20,17 @@ source ~/.extra
 ###############################################################################
 
 echo "------------------------------"
-echo "Updating py2-data virtual environment with AWS modules."
+echo "Updating py2k conda environment with AWS modules."
 
-# Create a Python2 data environment
-# If this environment already exists from running pydata.sh,
-# it will not be overwritten
-mkvirtualenv py2-data
-workon py2-data
+# Switch to Python2 data environment
+source activate py2k
 
 pip install boto
 pip install awscli
 pip install mrjob
 pip install s3cmd
 
-EXTRA_PATH=~/.extra
-echo $EXTRA_PATH
-echo "" >> $EXTRA_PATH
-echo "" >> $EXTRA_PATH
-echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
-echo "complete -C '~/.virtualenvs/py2-data/bin/aws_completer' aws" >> $EXTRA_PATH
-source $EXTRA_PATH
+source deactivate
 
 ###############################################################################
 # Python 3 Virtual Enviroment                                                 #
@@ -48,26 +39,16 @@ source $EXTRA_PATH
 echo "------------------------------"
 echo "Updating py3-data virtual environment with AWS modules."
 
-# Create a Python3 data environment
-# If this environment already exists from running pydata.sh,
-# it will not be overwritten
-mkvirtualenv --python=/usr/local/bin/python3 py3-data
-workon py3-data
+# Switch to Python3 data environment
+source activate py3k
 
 pip install boto
 pip install awscli
-#pip install mrjob  # Python 2 only
-#pip install s3cmd  # Python 2 only
+pip install mrjob
+pip install s3cmd
+pip install aws-shell
 
-# Uncomment if you want to hook up the aws cli autocomplete for Python 3
-#EXTRA_PATH=~/.extra
-#echo $EXTRA_PATH
-#echo "" >> $EXTRA_PATH
-#echo "" >> $EXTRA_PATH
-#echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
-#echo "complete -C '~/.virtualenvs/py3-data/bin/aws_completer' aws" >> $EXTRA_PATH
-#source $EXTRA_PATH
-
+source deactivate
 ###############################################################################
 # System-Wide Packages                                                        #
 ###############################################################################
@@ -94,18 +75,17 @@ echo "Installing IPython Notebook Spark integration"
 # Add the pyspark IPython profile
 cp -r init/profile_pyspark/ ~/.ipython/profile_pyspark
 
-BASH_PROFILE_PATH=~/.bash_profile
-echo $BASH_PROFILE_PATH
-echo "" >> $BASH_PROFILE_PATH
-echo "" >> $BASH_PROFILE_PATH
-echo "# IPython Notebook Spark integration, added by aws.sh" >> $BASH_PROFILE_PATH
+ZSHENV_PATH=~/.zshenv
+echo $ZSHENV_PATH
+echo "" >> $ZSHENV_PATH
+echo "" >> $ZSHENV_PATH
+echo "# IPython Notebook Spark integration, added by aws.sh" >> $ZSHENV_PATH
 # Run $ brew info apache-spark to determine the Spark install location
-echo "export SPARK_HOME='/usr/local/Cellar/apache-spark/1.4.1'" >> $BASH_PROFILE_PATH
-echo "# Appending pyspark-shell is needed for Spark 1.4+" >> $BASH_PROFILE_PATH
-echo "export PYSPARK_SUBMIT_ARGS='--master local[2] pyspark-shell'" >> $BASH_PROFILE_PATH
-echo "" >> $BASH_PROFILE_PATH
-source $BASH_PROFILE_PATH
-
+echo "export SPARK_HOME='/usr/local/Cellar/apache-spark/1.4.1'" >> $ZSHENV_PATH
+echo "# Appending pyspark-shell is needed for Spark 1.4+" >> $ZSHENV_PATH
+echo "export PYSPARK_SUBMIT_ARGS='--master local[2] pyspark-shell'" >> $ZSHENV_PATH
+echo "" >> $ZSHENV_PATH
+source $ZSHENV_PATH
 echo "------------------------------"
 echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
 echo "TODO: Update .mrjob.conf with your credentials, keypair, keypair location, region, and bucket info."
