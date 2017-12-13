@@ -31,7 +31,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+# brew install gnu-sed --with-default-names
 # Install ZSH
 brew install zsh
 # Activate ZSH
@@ -42,9 +42,6 @@ sudo bash -c 'echo /usr/local/bin/zsh >> /etc/shells'
 chsh -s /usr/local/bin/zsh
 # Install Oh-My-Zsh, a community-driven Zsh framework
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# Install `wget` with IRI support.
-brew install wget --with-iri
 
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
@@ -66,8 +63,8 @@ grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+# brew install homebrew/dupes/screen
+# brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -172,6 +169,9 @@ brew cask install --appdir="/Applications" amethyst
 
 #Remove comment to install LaTeX distribution MacTeX
 brew cask install --appdir="/Applications" mactex
+
+# Install `wget` with IRI support. Requires Java installed.
+brew install wget --with-iri
 
 # Install Docker, which requires virtualbox
 # brew install docker
