@@ -165,6 +165,7 @@ brew cask install --appdir="/Applications" 1password
 brew cask install --appdir="/Applications" spectacle
 brew cask install --appdir="/Applications" flux
 brew cask install --appdir="/Applications" spark
+brew cask install --appdir="/Applications" vlc
 
 #Remove comment to install LaTeX distribution MacTeX
 brew cask install --appdir="/Applications" mactex
