@@ -50,7 +50,7 @@ ZSH_THEME=agnoster
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew copydir z)
+plugins=(git github brew colored-man python osx copydir z zsh-syntax-highlighting)
 
 # User configuration
 
@@ -89,27 +89,14 @@ unset file;
 #
 source $HOME/fast.ai/setup/aws-alias.sh
 # Example aliases
-alias zshconfig="subl ~/.zshrc"
 alias envconfig="subl ~/Projects/config/env.sh"
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
-alias scheme="rlwrap -r -c -f /Users/local/opt/mit-scheme/mit_scheme_bindings.txt scheme"
-alias matlab='/Applications/MATLAB_R2017a.app/bin/matlab -nodesktop'
 
 # colors!
 # green="\[\033[0;32m\]"
 # blue="\[\033[0;34m\]"
 # purple="\[\033[0;35m\]"
 # reset="\[\033[0m\]"
-
-# Change command prompt
-# source ~/.git-prompt.sh
-# export GIT_PS1_SHOWDIRTYSTATE=1
-# '\u' adds the name of the current user to the prompt
-# '\$(__git_ps1)' adds git-related stuff
-# '\W' adds the name of the current directory
-# export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
-
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
