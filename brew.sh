@@ -42,6 +42,7 @@ sudo bash -c 'echo /usr/local/bin/zsh >> /etc/shells'
 chsh -s /usr/local/bin/zsh
 # Install Oh-My-Zsh, a community-driven Zsh framework
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+brew install zsh-syntax-highlighting
 
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
