@@ -19,18 +19,18 @@ source ~/.extra
 # Python 2 Virtual Enviroment                                                 #
 ###############################################################################
 
-echo "------------------------------"
-echo "Updating py2k conda environment with AWS modules."
+# echo "------------------------------"
+# echo "Updating py2k conda environment with AWS modules."
 
 # Switch to Python2 data environment
-source activate py2k
+# source activate py2k
 
-pip install boto
-pip install awscli
-pip install mrjob
-pip install s3cmd
+# pip install boto
+# pip install awscli
+# pip install mrjob
+# pip install s3cmd
 
-source deactivate
+# source deactivate
 
 ###############################################################################
 # Python 3 Virtual Enviroment                                                 #
@@ -44,8 +44,8 @@ source activate py3k
 
 pip install boto
 pip install awscli
-pip install mrjob
-pip install s3cmd
+# pip install mrjob
+# pip install s3cmd
 pip install aws-shell
 
 source deactivate
@@ -88,6 +88,6 @@ echo "" >> $ZSHENV_PATH
 source $ZSHENV_PATH
 echo "------------------------------"
 echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
-echo "TODO: Update .mrjob.conf with your credentials, keypair, keypair location, region, and bucket info."
-echo "TODO: Update .s3cfg with your credentials, location, and passphrase or run s3cmd --configure."
+# echo "TODO: Update .mrjob.conf with your credentials, keypair, keypair location, region, and bucket info."
+# echo "TODO: Update .s3cfg with your credentials, location, and passphrase or run s3cmd --configure."
 echo "Script completed."
