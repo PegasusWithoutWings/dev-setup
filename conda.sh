@@ -25,4 +25,4 @@ conda update -y conda
 conda create -ny py3k anaconda python=3
 
 # Install Anaconda2 and create py2k environment with conda
-conda create -ny py2k anaconda python=2
+# conda create -ny py2k anaconda python=2
