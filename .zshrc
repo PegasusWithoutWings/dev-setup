@@ -106,3 +106,6 @@ eval $(thefuck --alias)
 
 # hub alias
 eval "$(hub alias -s)"
+
+# Add Syntax Highlight
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
