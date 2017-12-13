@@ -155,6 +155,7 @@ brew cask install --appdir="/Applications" macdown
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" google-backup-and-sync
+brew cask install --appdir="/Applications" github
 # brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
@@ -167,6 +168,7 @@ brew cask install --appdir="/Applications" spectacle
 brew cask install --appdir="/Applications" flux
 brew cask install --appdir="/Applications" spark
 brew cask install --appdir="/Applications" vlc
+brew cask install --appdir="/Applications" amethyst
 
 #Remove comment to install LaTeX distribution MacTeX
 brew cask install --appdir="/Applications" mactex
