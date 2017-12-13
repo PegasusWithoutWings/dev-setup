@@ -32,14 +32,6 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install Bash 4.
-brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
-# We installed the new shell, now we have to activate it
-echo "Adding the newly installed shell to the list of allowed shells"
-# Prompts for password
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 # Install ZSH
 brew install zsh
 # Activate ZSH
