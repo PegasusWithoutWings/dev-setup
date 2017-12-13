@@ -53,8 +53,8 @@ brew install wget --with-iri
 # brew install narwhal
 
 # Install Python
-brew install python
-brew install python3
+# brew install python
+# brew install python3
 
 # Install ruby-build and rbenv
 brew install ruby-build
