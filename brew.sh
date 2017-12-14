@@ -169,8 +169,8 @@ brew cask install --appdir="/Applications" spark
 brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" amethyst
 
-#Remove comment to install LaTeX distribution MacTeX
-brew cask install --appdir="/Applications" mactex
+# Remove comment to install LaTeX distribution MacTeX
+# brew cask install --appdir="/Applications" mactex
 
 # Install `wget` with IRI support. Requires Java installed.
 brew install wget --with-iri
