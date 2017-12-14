@@ -87,10 +87,6 @@ unset file;
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-source $HOME/fast.ai/setup/aws-alias.sh
-# Example aliases
-alias envconfig="subl ~/Projects/config/env.sh"
-test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 # colors!
 # green="\[\033[0;32m\]"
